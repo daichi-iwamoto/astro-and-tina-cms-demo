@@ -29,9 +29,29 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
+        name: "minutes",
+        label: "議事録",
+        path: "src/pages/minutes",
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
+          },
+        ],
+      },
+      {
+        name: "specification",
+        label: "仕様書",
+        path: "src/pages/specification",
         fields: [
           {
             type: "string",
